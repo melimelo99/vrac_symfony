@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PrimeActiviteController!{% endblock %}
+
+{% block body %}
+    <h1>{{ total }}</h1>
+    {% if total < 10000 %}
+        <p>Pas de prime</p>
+
+    {% elseif total > 10000 and total < 15000 %}
+        <p>La prime est de {{total * (1/100)}} </p>
+    
+    {% elseif total >= 15000 and total < 25000 %}
+        <p>La prime est de {{total * (2/100)}} </p>
+    
+    {% elseif total >= 25000 and total < 45000 %}
+        <p>La prime est de {{total * (3/100)}} </p>
+    
+    {% else %} 
+        <p>La prime est de {{total * (4/100)}} </p>
+
+    {% endif %}
+{% endblock %}

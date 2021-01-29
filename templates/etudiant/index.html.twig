@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello EtudiantController!{% endblock %}
+
+{% block body %}
+    {% set somme = 0 %}
+    {% set moyenne = 0 %}
+    {% for val in etud %}
+        {% if (val == etud[ine]) %}
+            {% for value in val %}
+                {% set somme = value + somme %}
+            {% endfor %}
+            {% set moyenne = somme *(1/3) %}
+        {% endif %}
+        {% else %}
+    {% endfor %}
+
+<p> La moyenne de l'étudiant avec l'ine de : {{ine}} est de {{moyenne}}/20</p>
+        
+
+
+
+{% endblock %}

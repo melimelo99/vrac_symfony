@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HelloWorldController!{% endblock %}
+
+{% block body %}
+    {% set msg = 'Bonjour tout le monde' %}
+    {% set bool = true %}
+    {% set arr = [1,2,3] %}
+    {% set obj = {'nom' : 'Kara', 'adresse': {'n':'56', 'rue' : 'Gambetta', 'ville': 'Montpellier'}} %}
+
+    <p>
+        String : {{msg}}<br>
+        Boolean : {{bool}}<br>
+        Array : {{arr[2]}}<br>
+        Objet : {{obj.nom}} habite à {{obj.adresse.ville}}.
+    </p>
+{% endblock %}
